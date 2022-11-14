@@ -5,11 +5,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function ChooseYourLevel() {
-  const [age, setAge] = React.useState("");
-
+export default function ChooseYourLevel({ level, setLevel }) {
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setLevel(event.target.value);
   };
 
   return (
@@ -19,7 +17,7 @@ export default function ChooseYourLevel() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={age}
+          value={level}
           label="Level"
           onChange={handleChange}
         >

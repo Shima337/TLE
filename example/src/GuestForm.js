@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import ChooseTechnology from "./ChooseTechnology";
 import ChooseYourLevel from "./ChoseYourLevel";
 
-export default function GuestForm() {
+export default function GuestForm({ level, setLevel, tech, setTech }) {
   return (
     <div>
       <form>
@@ -10,8 +10,8 @@ export default function GuestForm() {
         <input></input>
         <div></div>
         <label>Chose Your Technology</label>
-        <ChooseTechnology />
-        <ChooseYourLevel />
+        <ChooseTechnology tech={tech} setTech={setTech} />
+        <ChooseYourLevel level={level} setLevel={setLevel} />
       </form>
     </div>
   );

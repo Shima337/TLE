@@ -5,11 +5,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function ChooseTechnology() {
-  const [age, setAge] = React.useState("");
-
+export default function ChooseTechnology({ tech, setTech }) {
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setTech(event.target.value);
   };
 
   return (
@@ -19,7 +17,7 @@ export default function ChooseTechnology() {
         <Select
           labelId="demo-simple-select-label"
           id="demo-simple-select"
-          value={age}
+          value={tech}
           label="Technology"
           onChange={handleChange}
         >
